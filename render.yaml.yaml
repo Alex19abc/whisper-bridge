@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: whisper-bridge
+    env: python
+    buildCommand: ""
+    startCommand: "python whisper_bridge.py"
