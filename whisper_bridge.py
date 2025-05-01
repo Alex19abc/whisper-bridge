@@ -4,8 +4,8 @@ import os
 
 app = Flask(__name__)
 
-# Tu clave API de OpenAI (reemplaza con la nueva si cambiaste)
-OPENAI_API_KEY = "sk-...aquí_tu_clave..."
+# Obtener la clave API desde el entorno (seguro para Render)
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 @app.route('/transcribir', methods=['POST'])
 def transcribir_audio():
